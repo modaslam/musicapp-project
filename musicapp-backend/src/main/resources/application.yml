@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: musicapp-backend
+  datasource:
+    url: "${db.url:jdbc:postgresql://localhost:5432/postgres}"
+    username: "${db.username:user}"
+    password: "${db.password:pass}"
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  servlet:
+    context-path: /api/musicapp
+
