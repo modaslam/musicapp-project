@@ -17,7 +17,7 @@ function App() {
             <Button variant="text" color="primary" component={Link} to="/" sx={{ my: 1, mx: 1.5 }}>
               Home
             </Button>
-            <Button variant="text" color="primary" component={Link} to="/inf-song-list" sx={{ my: 1, mx: 1.5 }}>
+            <Button variant="text" color="primary" component={Link} to="/infinite-song-list" sx={{ my: 1, mx: 1.5 }}>
               Infinite Song List
             </Button>
             <Button variant="text" color="primary" component={Link} to="/add-song" sx={{ my: 1, mx: 1.5 }}>
@@ -29,7 +29,7 @@ function App() {
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Routes>
           <Route path="/" element={<SongList />} />
-          <Route path="/inf-song-list" element={<InfiniteSongList />} />
+          <Route path="/infinite-song-list" element={<InfiniteSongList />} />
           <Route path="/add-song" element={<AddSongForm />} />
         </Routes>
       </Container>

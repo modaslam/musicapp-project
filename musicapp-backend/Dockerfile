@@ -1,5 +1,5 @@
 # Base image containing Java runtime
-FROM openjdk:11-jdk-slim as build
+FROM openjdk:17-jdk-slim as build
 
 LABEL maintainer="modaslam1327@gmail.com"
 

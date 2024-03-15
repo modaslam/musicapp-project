@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGetSongDetails } from 'Hooks/useSongs';
-import { Typography, CircularProgress, Modal, Card, CardContent, IconButton } from '@mui/material';
+import { Typography, Box, CircularProgress, Modal, Card, CardContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 const modalStyle = {
@@ -33,14 +33,38 @@ const SongDetailsModal = ({ id, open, handleClose }) => {
           <IconButton aria-label="close" onClick={handleClose} sx={{ position: 'absolute', right: 8, top: 8 }}>
             <CloseIcon />
           </IconButton>
-          <Typography id="song-details-title" variant="h6" component="h2">{song?.name}</Typography>
-          <Typography id="song-details-description" sx={{ mt: 2 }}>
-            Artist: {song?.artist}<br />
-            Album: {song?.album}<br />
-            Year: {song?.year}<br />
-            Length: {song?.length} minutes<br />
-            Genre: {song?.genre}
-          </Typography>
+          <Typography id="song-details-title" variant="h5" component="h2">{song?.name}</Typography>
+
+          <Box display="flex" alignItems="center" sx={{ mt: 2 }}>
+            <Typography sx={{ mr: 4 }} color="text.secondary" component="span">
+              Artist:
+            </Typography>
+            <span>{song?.artist}</span>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Typography sx={{ mr: 3 }} color="text.secondary" component="span">
+              Album:
+            </Typography>
+            <span>{song?.album}</span>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Typography sx={{ mr: 4.4 }} color="text.secondary" component="span">
+              Year:
+            </Typography>
+            <span>{song?.year}</span>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Typography sx={{ mr: 2.5 }} color="text.secondary" component="span">
+              Length:
+            </Typography>
+            <span>{song?.length}</span>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Typography sx={{ mr: 3 }} color="text.secondary" component="span">
+              Genre:
+            </Typography>
+            <span>{song?.genre}</span>
+          </Box>
         </CardContent>
       </Card>
     </Modal>

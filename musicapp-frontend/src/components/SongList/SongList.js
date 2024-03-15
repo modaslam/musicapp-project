@@ -22,7 +22,7 @@ const SongList = () => {
   const [filters, setFilters] = useState({
     artist: '',
     year: '',
-    page: 1,
+    page: 0,
     size: 10,
     sortProperty: 'name',
     sortDir: 'asc',
@@ -110,17 +110,17 @@ const SongList = () => {
         </Alert>
       )}
       <List>
-        {songs?.map(song => (
+        {songs && Array.isArray(songs) && songs?.map(song => (
           <ListItemButton key={song.id} onClick={() => handleOpenModal(song.id)}>
             <ListItemText primary={song.name} secondary={`by ${song.artist}`} />
           </ListItemButton>
         ))}
       </List>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-        <Button onClick={() => handlePageChange(Math.max(1, filters.page - 1))} disabled={filters.page <= 1}>Previous</Button>
-        <Button onClick={() => handlePageChange(filters.page + 1)}>Next</Button>
+        <Button onClick={() => handlePageChange(Math.max(0, filters.page - 1))} disabled={filters.page < 1}>Previous</Button>
+        <Button onClick={() => handlePageChange(filters.page + 1)} disabled={songs?.length < filters.size}>Next</Button>
       </Box>
-      <SongDetailsModal id={selectedSongId} open={modalOpen} handleClose={handleCloseModal} />
+      {selectedSongId && <SongDetailsModal id={selectedSongId} open={modalOpen} handleClose={handleCloseModal} />}
     </Box>
   );
 };

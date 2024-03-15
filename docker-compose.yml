@@ -7,9 +7,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/musicapp
-      SPRING_DATASOURCE_USERNAME: user
-      SPRING_DATASOURCE_PASSWORD: password
+      DB_URL: 'jdbc:postgresql://db:5432/postgres' # Ensure connection with db service within Docker
+      DB_USERNAME: 'user'
+      DB_PASSWORD: 'pass'
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       - db
@@ -19,16 +19,18 @@ services:
       context: ./musicapp-frontend
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "3000:3000"
 
   db:
     image: postgres:12
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: 'postgres'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'pass'
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data # Persists db data
+    ports:
+      - "5432:5432" # Exposes db on port 5432
 
 volumes:
-  postgres_data:
+  postgres_data: # Define volume for db data

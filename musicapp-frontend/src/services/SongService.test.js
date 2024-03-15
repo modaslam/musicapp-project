@@ -4,7 +4,7 @@ import { getSongs, addSong, getSongDetails } from './SongService';
 
 describe('SongService', () => {
   let mock;
-  const baseURL = process.env.REACT_APP_API_BASE_URL;
+  const baseURL = `/api`;
 
   beforeEach(() => {
     mock = new MockAdapter(axios);
