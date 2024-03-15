@@ -73,6 +73,6 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 - For scalability and management, Kubernetes or Docker Swarm may be considered, especially if the application scales out.
 
 ## Further Reading:
-- For more information on the backend setup, see the [backend help documentation](./musicapp-backend/HELP.md).
+- For more information on the backend setup, see the [backend help documentation](./musicapp-backend/README.md).
 - For more information on the frontend setup, see the [frontend help documentation](./musicapp-frontend/README.md).
 - To view an example system design: [System design diagram](system-design.png).
