@@ -45,6 +45,7 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 - Ensure Docker is installed and running.
 - From the project root directory, run `docker-compose up -d --build` to build and start both frontend and backend services, including db.
 - Access the frontend at `http://localhost:3000`
+- Access the backend APIs at `http://localhost:8080/api/musicapp/songs`
 
 ## Stopping the Application
 - From the project root directory, run `docker-compose down`.

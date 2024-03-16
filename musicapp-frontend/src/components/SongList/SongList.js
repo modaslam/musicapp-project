@@ -41,6 +41,7 @@ const SongList = () => {
   useEffect(() => {
     const debouncedRefetch = debounce(() => {
       setFilters((filters) => ({ ...filters, artist, year }));
+      handlePageChange(0);
     }, 500);
 
     debouncedRefetch();
@@ -75,14 +76,6 @@ const SongList = () => {
 
   const handleCloseModal = () => setModalOpen(false);
 
-  if (isLoading) {
-    return (
-      <Backdrop open={true} sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <CircularProgress color="inherit" />
-      </Backdrop>
-    );
-  }
-
   return (
     <Box>
       <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
@@ -109,13 +102,19 @@ const SongList = () => {
           Error loading songs: {error?.message || "Unknown error occurred."}
         </Alert>
       )}
-      <List>
-        {songs && Array.isArray(songs) && songs?.map(song => (
+      {isLoading ? (
+        <Backdrop open={true} sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      ) : <List>
+        {songs && songs?.map(song => (
           <ListItemButton key={song.id} onClick={() => handleOpenModal(song.id)}>
             <ListItemText primary={song.name} secondary={`by ${song.artist}`} />
           </ListItemButton>
         ))}
       </List>
+      }
+
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
         <Button onClick={() => handlePageChange(Math.max(0, filters.page - 1))} disabled={filters.page < 1}>Previous</Button>
         <Button onClick={() => handlePageChange(filters.page + 1)} disabled={songs?.length < filters.size}>Next</Button>

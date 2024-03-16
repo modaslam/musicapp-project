@@ -44,10 +44,10 @@ Alternatively, you can run the application directly using Maven:
 ```
 mvn spring-boot:run
 ```
-The application will start on http://localhost:8080/api.
+The application will start on http://localhost:8080/api/musicapp.
 
 ## API Documentation
-Access the API documentation at http://localhost:8080/api/swagger-ui
+Access the API documentation at http://localhost:8080/api/musicapp/swagger-ui.html
 
 ### API Endpoints
 
