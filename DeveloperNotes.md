@@ -59,7 +59,7 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 - **UI Responsiveness:** The use of Material-UI in the frontend helps in achieving a responsive design that adapts to various screen sizes. It also helped reduce development time.
 
 ## Potential System Design Overview
-- **MusicApp Frontend:** Serves the user interface, where users can add, view, filter, and sort their music catalog. It's built and served by a Docker container, accessible on port 3000 (chose port 3000 as there was a time-consuming issue regarding port 80).
+- **MusicApp Frontend:** Serves the user interface, where users can add, view, filter, and sort their music catalog. It's built and served by a Docker container, accessible on port 3000.
 - **MusicApp Backend:** Handles business logic, processes API requests from the frontend, and communicates with the database and cache. It's also containerized, with communication set on port 8080.
 - **Database (PostgreSQL)**: Stores data about the songs. It's run in a Docker container, with its data volume persisted and exposed on port 5432 for direct database access.
 - **Cache Layer (Redis/Memcached):** Incorporating a cache layer could enhance performance by caching frequent queries and results.
