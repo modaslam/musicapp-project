@@ -14,7 +14,7 @@ logging:
     com.ice.musicappbackend: DEBUG
 server:
   servlet:
-    context-path: /api
+    context-path: /api/musicapp
 springdoc:
   api-docs:
     path: /api-docs

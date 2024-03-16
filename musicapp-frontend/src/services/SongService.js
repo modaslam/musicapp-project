@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = `/api/songs`;
+const API_BASE_URL = '/api/musicapp/songs';
 
 // Fetch songs with optional filters
 export const getSongs = async (filters = {}) => {

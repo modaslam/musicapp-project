@@ -11,6 +11,7 @@ services:
       DB_USERNAME: 'user'
       DB_PASSWORD: 'pass'
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SERVER_SERVLET_CONTEXT_PATH: /api/musicapp # Context path of application
     depends_on:
       - db
 
