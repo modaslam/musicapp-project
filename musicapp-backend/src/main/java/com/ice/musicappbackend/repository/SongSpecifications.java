@@ -12,7 +12,10 @@ public class SongSpecifications {
      */
     public static Specification<Song> hasArtist(String artist) {
         // CriteriaBuilder's like function for partial string matching
-        return (song, cq, cb) -> cb.like(song.get("artist"), "%" + artist + "%");
+        return (root, query, cb) -> cb.like(
+                cb.lower(root.get("artist")), // Convert to lowercase for case-insensitive search
+                "%" + artist.toLowerCase() + "%"
+        );
     }
 
     /**
@@ -23,7 +26,7 @@ public class SongSpecifications {
      */
     public static Specification<Song> hasYear(Integer year) {
         // CriteriaBuilder's equal function for exact matching of the year
-        return (song, cq, cb) -> cb.equal(song.get("year"), year);
+        return (root, query, cb) -> cb.equal(root.get("year"), year);
     }
 }
 
