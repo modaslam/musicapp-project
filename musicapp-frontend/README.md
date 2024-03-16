@@ -17,12 +17,13 @@ This is the frontend for the MusicApp, a responsive web application that allows 
 - Node.js (v14 or later)
 - npm
 
-### Configuration
-Create an `.env` file if required to set the backend API URL for different environments:
+### Configuration (Not required and can be ignored)
+Create an `.env` file if required to set the backend API URL if you want to deploy to different environments:
 
 ```dotenv
 REACT_APP_API_BASE_URL={http://environment-url-example:8080}
 ```
+Then in the `SongService.js`, the `API_BASE_URL` could be changed to refer to this `process.env.REACT_APP_API_BASE_URL` instead.
 ### Running the Application Locally
 
 1. Install the dependencies:
