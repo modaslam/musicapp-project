@@ -5,7 +5,7 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 
 ## System Design and Decisions
 - **Backend Framework:** Spring Boot was chosen for its simplicity in creating RESTful services and its extensive support for data access, security, and testing.
-- **Frontend Library:** React was required for the task and used for the development of a dynamic and responsive UI.
+- **Frontend Library:** React was used for the development of a dynamic and responsive UI.
 - **Database:** PostgreSQL is used for data persistence, due to its robustness and support for complex queries.
 - **Deployment:** Docker containers are utilized for both frontend and backend for ease of deployment and scalability.
 ### Implemented Features
@@ -75,4 +75,6 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 ## Further Reading:
 - For more information on the backend setup, see the [backend help documentation](./musicapp-backend/README.md).
 - For more information on the frontend setup, see the [frontend help documentation](./musicapp-frontend/README.md).
-- To view an example system design: [System design diagram](system-design.png).
+- To view the system architecture followed: [System design 1](architecture.png).
+- To view an alternate system design: [System design 2](system-design.png).
+- To view short presentation of current implementation design: [Open Miro Board](https://miro.com/app/board/uXjVNgXNNuE=/?share_link_id=740731379346&shareablePresentation=1)
