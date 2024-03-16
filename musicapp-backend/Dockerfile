@@ -9,7 +9,7 @@ EXPOSE 8080
 
 ARG JAR_FILE=target/*.jar
 
-# Add the application's jar to the container
+# Add jar to the container
 ADD ${JAR_FILE} app.jar
 
 # Run the jar file

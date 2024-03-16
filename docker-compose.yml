@@ -30,7 +30,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data # Persists db data
     ports:
-      - "5432:5432" # Exposes db on port 5432
+      - "5432:5432" # Expose db on port 5432
 
 volumes:
   postgres_data: # Define volume for db data
