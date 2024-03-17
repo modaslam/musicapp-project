@@ -13,6 +13,12 @@ This is the frontend for the MusicApp, a responsive web application that allows 
 - **React Query:** Utilized for fetching, caching, and updating data in the background, enhancing the user experience by making the application more responsive.
 - **Lodash:** A modern JavaScript utility library delivering modularity, performance, & extras.
 
+## Implemented Features
+- Page for adding a song with success and error alert notifications.
+- Page for infinite scroll of songs (with increments of 10 songs).
+- Page for viewing songs with pagination. Includes filtering by artist(partial search) and year(full search). Can be sorted in ascending or descending order.
+- Modal to show further song details upon clicking a song in the song list.
+
 ## Getting Started
 
 ### Prerequisites
@@ -42,7 +48,3 @@ Run the following command to execute the unit tests:
 ```
 npm test
 ```
-## Implemented Features
-- UI for adding a song with success and error alert notifications
-- UI for infinite scroll of songs (with increments of 10 songs)
-- UI for viewing songs with pagination. Includes filtering by artist(partial search) and year(full search). Can be sorted in ascending or descending order.
