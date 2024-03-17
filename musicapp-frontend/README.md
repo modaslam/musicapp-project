@@ -1,5 +1,7 @@
 # MusicApp Frontend
 
+### [Main documentation](../DeveloperNotes.md).
+
 ## Introduction
 This is the frontend for the MusicApp, a responsive web application that allows users to manage their favorite songs. It's built with React and communicates with the MusicApp Backend for data management.
 
@@ -40,3 +42,7 @@ Run the following command to execute the unit tests:
 ```
 npm test
 ```
+## Implemented Features
+- UI for adding a song with success and error alert notifications
+- UI for infinite scroll of songs (with increments of 10 songs)
+- UI for viewing songs with pagination. Includes filtering by artist(partial search) and year(full search). Can be sorted in ascending or descending order.
