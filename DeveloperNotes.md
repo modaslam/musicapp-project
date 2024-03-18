@@ -74,8 +74,8 @@ The MusicApp is designed to allow users to manage their favorite songs. The appl
 - For scalability and management, Kubernetes or Docker Swarm may be considered, especially if the application scales out.
 
 ## Further Reading:
-- For more information on the backend setup, see the [backend help documentation](./musicapp-backend/README.md).
-- For more information on the frontend setup, see the [frontend help documentation](./musicapp-frontend/README.md).
+- For more information on the backend and its setup, see the [backend help documentation](./musicapp-backend/README.md).
+- For more information on the frontend and its setup, see the [frontend help documentation](./musicapp-frontend/README.md).
 - To view the system architecture followed: [System design 1](architecture.png).
 - To view an alternate system design: [System design 2](system-design.png).
 - To view short presentation of current implementation design: [Open Miro Board](https://miro.com/app/board/uXjVNgXNNuE=/?share_link_id=740731379346&shareablePresentation=1)

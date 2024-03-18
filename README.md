@@ -5,9 +5,9 @@ For Developer notes and project setup (RECOMMENDED), see the [developer notes do
 ####
 For System Design diagram, see the [System architecture](architecture.png).
 ####
-For Backend setup (OPTIONAL), see the [backend help documentation](./musicapp-backend/README.md).
+For Backend details and setup (OPTIONAL), see the [backend help documentation](./musicapp-backend/README.md).
 ####
-For Frontend setup (OPTIONAL), see the [frontend help documentation](./musicapp-frontend/README.md).
+For Frontend details and setup (OPTIONAL), see the [frontend help documentation](./musicapp-frontend/README.md).
 
 
 ### Note
