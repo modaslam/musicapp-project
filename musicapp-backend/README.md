@@ -64,6 +64,20 @@ Access the API documentation at http://localhost:8080/api/musicapp/swagger-ui.ht
 - `sortProperty`: Specifies the property to sort by (`name` or `year`).
 - `sortDir`: Specifies the sort direction (`asc` for ascending or `desc` for descending).
 
+### Example API calls
+
+1. GET all songs: `http://localhost:8080/api/musicapp/songs`
+2. GET songs by artist: `http://localhost:8080/api/musicapp/songs?artist=John Lennon`
+3. GET songs by year: `http://localhost:8080/api/musicapp/songs?year=1971`
+4. GET songs by artist and year: `http://localhost:8080/api/musicapp/songs?artist=John Lennon&year=1971`
+5. GET songs by page and page size: `http://localhost:8080/api/musicapp/songs?page=0&size=20`
+6. GET songs sorted by name in DESC order: `http://localhost:8080/api/musicapp/songs?sortProperty=name&sortDir=desc`
+7. GET songs sorted by year in ASC order: `http://localhost:8080/api/musicapp/songs?sortProperty=year&sortDir=asc`
+8. GET songs by artist sorted by year in DESC order: `http://localhost:8080/api/musicapp/songs?artist=Queen&sortProperty=year&sortDir=desc`
+9. GET song by ID: `http://localhost:8080/api/musicapp/songs/13`
+10. DELETE song by ID: `http://localhost:8080/api/musicapp/songs/13`
+11. ADD song: `http://localhost:8080/api/musicapp/songs`
+
 #### Sample POST inputs:
 
 1. ```
@@ -72,7 +86,7 @@ Access the API documentation at http://localhost:8080/api/musicapp/swagger-ui.ht
     "artist": "Michael Jackson",
     "album": "Thriller",
     "year": 1982,
-    "length": 4.54,
+    "length": 5.24,
     "genre": "Pop"
     }
    ```
@@ -82,7 +96,7 @@ Access the API documentation at http://localhost:8080/api/musicapp/swagger-ui.ht
     "artist": "Led Zeppelin",
     "album": "Led Zeppelin IV",
     "year": 1971,
-    "length": 8.02,
+    "length": 8.43,
     "genre": "Rock"
     }
 
